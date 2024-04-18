@@ -1,0 +1,186 @@
+body {
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.message_container {
+    background-color: bisque;
+    width: 1500px;
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
+.message_data {
+    border: 1px solid black;
+}
+
+.message_data_result {
+    display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    justify-content: space-between;
+}
+
+.addnewmessage {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.yourname {
+    display: flex;
+    align-items: center;
+    gap: 2.1rem;
+}
+
+.input_yourname {
+    width: 92%;
+    height: 20px;
+}
+
+
+.yourmessage {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.send {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.buttonadd {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 1rem;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.show_button {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+#result_show_text {
+    border: 1px solid black;
+    width: 830px;
+    min-height: 150px;
+    word-break: break-all;
+}
+
+.result {
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding-left: 20rem;
+}
+
+.button_show {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.formId1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: bisque;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.result_show_text_container {
+    display: flex;
+    justify-content: center;
+}
+
+#result_show_text {
+    background-color: white;
+}
+
+.textarea {
+    display: flex;
+    justify-content: center;
+}
+
+.question1 {
+    font-size: 1.5rem;
+}
+
+.questionanswer1 {
+    font-size: 1.5rem;
+}
+
+.formId2 {
+    display: grid;
+    justify-content: center;
+    background-color: bisque;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+#answer {
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.seat {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    margin: 0 auto;
+    width: 500px;
+}
+
+.sale_filter_container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    padding-bottom: 2rem;
+
+}
+
+.formId3{
+    display: grid;
+    justify-content: center;
+    background-color: bisque;
+    padding: 1rem;
+
+}
+
+.my_tickets{
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: left;
+}
+
+#total_price{
+    font-size: 2rem;
+    color: red;
+    display: flex;
+    justify-content: flex-end;
+}
+.sell_ticket{
+    display: flex;
+    justify-content: center;
+}
