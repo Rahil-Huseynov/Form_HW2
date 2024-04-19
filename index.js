@@ -1,22 +1,11 @@
-// Task-1
+// // Task-1
 const form = document.getElementById('formId');
 
+const result_container = document.getElementById('result_container');
+const button = document.getElementById('button1');
 const message_container = document.getElementById('message_container');
 
-const message_data = document.getElementById('message_data')
-
-const message_data_result = document.getElementById('message_data_result')
-
-const name_span = document.getElementById('name_span')
-
-const date_span = document.getElementById('date_span')
-
-const message_result = document.getElementById('message_result')
-
-const add = document.getElementById('add')
-
-let tasks = [];
-
+let result = [];
 
 form.addEventListener('submit', (e) => {
 
@@ -27,38 +16,66 @@ form.addEventListener('submit', (e) => {
     const formValues = {};
 
     for (let [key, value] of data.entries()) {
-
         formValues[key] = value;
-
     }
-
     formValues.id = Math.trunc(Math.random() * 1000);
 
+    formValues.isComplete = false;
 
-    tasks.push(formValues);
+    result.push(formValues);
 
     message();
 });
 
-
 function message() {
+    result_container.innerHTML = '';
 
-    tasks.forEach((task) => {
+    result.forEach((result) => {
 
-        let date = new Date
+        const allitemsmessage = document.createElement('div');
+        const elementdiv = document.createElement('div');
 
-        name_span.textContent = ` Name:${task.name}`;
+        elementdiv.classList.add('elementdiv')
 
-        date_span.textContent = date.toLocaleString()
+        const nameContainer = document.createElement('span');
 
-        message_result.textContent = `${task.message}`
+        const dateContainer = document.createElement('span');
 
+        const partition = document.createElement('div');
 
+        const message_result_div = document.createElement('div');
+
+        const messageContainer = document.createElement('div');
+
+        nameContainer.textContent = `Name: ${result.name}`;
+
+        dateContainer.textContent = `Date: ${new Date().toLocaleString()}`;
+
+        messageContainer.textContent = `Message: ${result.message}`;
+
+        elementdiv.appendChild(nameContainer);
+
+        elementdiv.appendChild(dateContainer);
+
+        message_result_div.appendChild(messageContainer)
+
+        result_container.appendChild(allitemsmessage)
+
+        allitemsmessage.appendChild(elementdiv);
+
+        allitemsmessage.appendChild(partition);
+
+        allitemsmessage.appendChild(message_result_div);
+
+        allitemsmessage.classList.add('allitemsmessage')
+        partition.classList.add('partition')
+        messageContainer.classList.add('messageContainer')
+
+        message_container.style.display = 'none'
     });
-
-
-
 }
+
+
 
 // Task-2
 
@@ -107,9 +124,9 @@ function select_type_words() {
 
     result_show_text.innerHTML = '';
 
+    const p = document.createElement('p');
     tasks1.forEach((task) => {
 
-        const p = document.createElement('p');
 
         let text = task.textarea;
 
@@ -132,12 +149,12 @@ function select_type_words() {
             p.style.textAlign = 'right';
         }
         else if (justify.checked) {
-            p.style.textAlign = 'justify';
+            p.style.textAlign = 'center';
         }
         p.innerHTML = text;
 
-        result_show_text.appendChild(p);
     });
+    result_show_text.appendChild(p);
 }
 
 
@@ -162,6 +179,9 @@ const next = document.getElementById('next');
 
 const finish = document.getElementById('finish');
 
+const task1 = document.getElementById('task1')
+
+const task2 = document.getElementById('task2')
 
 let tasks2 = [];
 
@@ -202,13 +222,17 @@ function question() {
 
 next.addEventListener('click', () => {
     if (answer1.checked || answer2.checked) {
+        finish.style.display = 'block'
         next.style.display = 'none'
+        task2.style.display = 'block'
+        task1.style.display = 'none'
     }
 })
 
 finish.addEventListener('click', () => {
     if (answer3.checked || answer4.checked) {
         finish.style.display = 'none'
+        answer.style.display = 'block'
     }
 })
 
@@ -286,13 +310,13 @@ function renderTickets() {
         const date = document.createElement('td');
 
         const seat = document.createElement('td');
-       
+
         tbody.appendChild(row);
-        
+
         row.appendChild(direction)
-       
+
         row.appendChild(date)
-       
+
         row.appendChild(seat)
 
         if (seat1.checked) {
@@ -443,14 +467,14 @@ function renderTickets() {
 
         direction.innerHTML = `${ticket.direction}`
 
- 
+
     });
     total_price.innerHTML = `Total price = ${totalprice}$`
 }
 
 search.addEventListener('click', () => {
-    if (seat1.checked || seat2.checked || seat3.checked || seat4.checked || seat5.checked || seat6.checked || seat7.checked || seat8.checked || seat9.checked || seat10.checked ||seat11.checked||seat12.checked||seat13.checked||seat14.checked||seat15.checked||seat16.checked||seat17.checked||seat18.checked||seat19.checked||seat20.checked||seat21.checked||seat22.checked||seat23.checked||seat24.checked||seat25.checked||seat26.checked||seat27.checked||seat28.checked){
-        totalprice +=20
+    if (seat1.checked || seat2.checked || seat3.checked || seat4.checked || seat5.checked || seat6.checked || seat7.checked || seat8.checked || seat9.checked || seat10.checked || seat11.checked || seat12.checked || seat13.checked || seat14.checked || seat15.checked || seat16.checked || seat17.checked || seat18.checked || seat19.checked || seat20.checked || seat21.checked || seat22.checked || seat23.checked || seat24.checked || seat25.checked || seat26.checked || seat27.checked || seat28.checked) {
+        totalprice += 20
     }
 })
 

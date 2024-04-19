@@ -10,6 +10,7 @@
 
 <body>
     <form action="" id="formId">
+        <div id="result_container"></div>
         <div class="message_container" id="message_container">
             <div class="message_data" id="message_data">
                 <div class="message_data_result" id="message_data_result">
@@ -30,21 +31,31 @@
                     Tempore eum consequatur similique quae pariatur, odio error nobis libero accusamus voluptatem
                     nostrum laborum quas obcaecati laudantium ab voluptatum molestias qui ipsum. </div>
             </div>
-            <div>
-                <p class="addnewmessage">Add new message</p>
-                <div class="yourname">
-                    <p>Your name:</p>
-                    <input class="input_yourname" type="text" name="name" id="">
-                </div>
-                <div class="yourmessage">
-                    <p>Your message:</p>
-                    <textarea class="input_message" name="message" id="" cols="170" rows="3"></textarea>
-                </div>
-            </div>
-            <button type="submit" class="send" id="send">Send</button>
+        </div>
 
+        <div class="name_container">
+            <div class="yournamediv">
+                <span class="span">Your name:</span>
+
+                <input class="yourname" name="name" id="" cols="10" rows="3" required></input>
+
+            </div>
+            <div class="yourmessage">
+                <span>Your messsage:</span>
+                <textarea class="" name="message" id="" cols="78" rows="5" required></textarea>
+            </div>
+        </div>
+
+        <div class="button_container">
+
+            <div class="button" id="button">
+
+                <button id="button1">Send</button>
+
+            </div>
         </div>
     </form>
+
 
     <form id="formId1" class="formId1">
         <div class="checkbox ">
@@ -56,7 +67,7 @@
             <input type="radio" id="justify" name="align">Justify
         </div>
         <div class="textarea">
-            <textarea name="textarea" id="task" cols="101" rows="5"></textarea>
+            <textarea name="textarea" id="task" cols="106" rows="10"></textarea>
         </div>
         <div class="button_show">
             <button type="submit">Show Text</button>
@@ -68,7 +79,7 @@
     </form>
 
     <form id="formId2" class="formId2">
-        <div class="task">
+        <div class="task" id="task1">
             <p class="question1"><span style="font-weight: 800;">1)</span>How many letters are there in the word
                 "Hello"?</p>
             <div>
@@ -82,7 +93,7 @@
             <button type="submit" id="next">Next</button>
         </div>
 
-        <div class="task">
+        <div class="task" id="task2">
             <p class="question1"><span style="font-weight: 800;">2)</span>How many letters are there in the word
                 "Hello"?</p>
             <div>
@@ -115,7 +126,7 @@
             </div>
             <button type="submit" id="search">Search</button>
         </div>
-        <div class="seat">                
+        <div class="seat">
             <input type="checkbox" id="seat1" name="seat1">1
             <input type="checkbox" id="seat2" name="seat2">2
             <input type="checkbox" id="seat3" name="seat3">3
@@ -159,7 +170,7 @@
                     </thead>
 
                     <tbody id="tbody">
-                     
+
 
 
                     </tbody>
@@ -172,7 +183,7 @@
 
 
 
-    <script src="index.js" ></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
