@@ -461,12 +461,26 @@ function renderTickets() {
             seat28.setAttribute("disabled", "")
 
         }
-        date.innerHTML = `${ticket.date}`
+        
+        if(ticket.date){
+            date.innerHTML = `${ticket.date}`
+        }else{
+            date.innerHTML =  'Vaxt qeyd olunmayib'  
+        }
 
-        seat.innerHTML = `${ticket.seat}`
+        if(ticket.seat){
+            seat.innerHTML = `${ticket.seat}`
+        }else{
+            seat.innerHTML =  'Oturacaq qeyd olunmayib'  
+        }
 
-        direction.innerHTML = `${ticket.direction}`
 
+        
+        if(ticket.direction){
+            direction.innerHTML = `${ticket.direction}`
+        }else{
+            direction.innerHTML =  'Vaxt qeyd olunmayib'  
+        }
 
     });
     total_price.innerHTML = `Total price = ${totalprice}$`
