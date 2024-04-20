@@ -64,7 +64,7 @@
             <input type="checkbox" id="italics">Italics
             <input type="radio" id="left" name="align">Left
             <input type="radio" id="right" name="align">Right
-            <input type="radio" id="justify" name="align">Justify
+            <input type="radio" id="justify" name="align">Center
         </div>
         <div class="textarea">
             <textarea name="textarea" id="task" cols="106" rows="10"></textarea>
@@ -114,7 +114,7 @@
         <div class="sale_filter_container">
             <div>
                 <span>Direction:</span>
-                <select name="direction" id="direction">
+                <select name="direction" id="select">
                     <option value="">Səfəri qeyd edin.</option>
                     <option value="Odessa-Lviv">Odessa - Lviv</option>
                     <option value="Krakow-Warsaw">Krakow - Warsaw</option>
@@ -123,11 +123,11 @@
                 </select>
             </div>
             <div>
-                <input type="date" name="date">
+                <input type="date" name="date" id="date" value="date">
             </div>
             <button type="submit" id="search">Search</button>
         </div>
-        <div class="seat">
+        <div class="seat" id="checkbox">
             <input type="checkbox" id="seat1" name="seat1">1
             <input type="checkbox" id="seat2" name="seat2">2
             <input type="checkbox" id="seat3" name="seat3">3
@@ -177,7 +177,9 @@
                     </tbody>
                 </table>
             </div>
+            <div id="sell_about">
             <div id="total_price"></div>
+        </div>
         </div>
     </form>
 
