@@ -479,7 +479,7 @@ function renderTickets() {
         if(ticket.direction){
             direction.innerHTML = `${ticket.direction}`
         }else{
-            direction.innerHTML =  'Vaxt qeyd olunmayib'  
+            direction.innerHTML =  'Səfər qeyd olunmayib'  
         }
 
     });
