@@ -253,17 +253,10 @@ const tbody = document.querySelector('tbody');
 const select = document.getElementById('select')
 
 const date = document.getElementById('date')
+
 let tickets = [];
 
 let totalprice = 0;
-
-checkboxes.forEach(checkbox => {
-
-    checkbox.addEventListener('change', () => {
-        updateTickets();
-    });
-});
-
 
 form3.addEventListener('submit', (e) => {
 
@@ -281,6 +274,13 @@ form3.addEventListener('submit', (e) => {
     tickets.push(ticket);
 
     renderTickets();
+});
+
+checkboxes.forEach(checkbox => {
+
+    checkbox.addEventListener('change', () => {
+        updateTickets();
+    });
 });
 
 function updateTickets() {
